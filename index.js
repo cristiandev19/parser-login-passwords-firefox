@@ -17,7 +17,7 @@ function parseArrayToFile(array) {
   let fileNum = 1;
   for(let arr of array) {
 
-    const logger = fs.createWriteStream(`${fileNum}.txt`, {
+    const logger = fs.createWriteStream(`./filesParsed/${fileNum}.csv`, {
       flags: 'a' // 'a' means appending (old data will be preserved)
     })
     for(let line of arr) {
