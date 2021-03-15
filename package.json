@@ -1,0 +1,23 @@
+{
+  "name": "parser-login-passwords-firefox",
+  "version": "1.0.0",
+  "description": "Esta herramienta te parsea un archivo CSV exportado de firefox para bitwarden porque este solo te permite 1000 caraceteres",
+  "main": "index.js",
+  "dependencies": {
+    "line-reader": "^0.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristiandev19/parser-login-passwords-firefox.git"
+  },
+  "author": "Cristian Sotomayor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cristiandev19/parser-login-passwords-firefox/issues"
+  },
+  "homepage": "https://github.com/cristiandev19/parser-login-passwords-firefox#readme"
+}
