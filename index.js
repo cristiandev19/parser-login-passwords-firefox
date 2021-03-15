@@ -10,16 +10,17 @@ async function parseToBitwarden() {
   console.log('contentMinusHeader', contentMinusHeader);
   // console.log('arrayJSON', arrayJSON)
   const arrayOfSections = sectionJSON(arrayJSON, contentMinusHeader)
-  parseArrayToFile(arrayOfSections);
+  parseArrayToFile(arrayOfSections, header);
 }
 
-function parseArrayToFile(array) {
+function parseArrayToFile(array, header) {
   let fileNum = 1;
   for(let arr of array) {
 
     const logger = fs.createWriteStream(`./filesParsed/${fileNum}.csv`, {
       flags: 'a' // 'a' means appending (old data will be preserved)
     })
+    logger.write(header.content + os.EOL) // append string to your file
     for(let line of arr) {
       logger.write(line.content + os.EOL) // append string to your file
     }
